@@ -1,0 +1,14 @@
+{
+  "name": "TEMP",
+  "description": "Template example",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/bondrogeen/snippet.template"
+  },
+  "keywords": ["esp8266", "lua", "nodemcu", "webserver"],
+  "author": "you_name <you_name@gmail.com>",
+  "license": "MIT",
+  "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi","i2c"]
+}
