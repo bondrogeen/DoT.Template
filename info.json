@@ -6,7 +6,7 @@
   "homepage": "",
   "repository": {
    "type": "git",
-   "url": "https://github.com/bondrogeen/snippet.template"
+   "url": "https://github.com/bondrogeen/template.module"
   },
   "keywords": ["esp8266", "lua", "nodemcu", "webserver","template"],
   "author": {
