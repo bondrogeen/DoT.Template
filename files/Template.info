@@ -20,5 +20,5 @@
     "gpio":1
   },
   "license": "MIT",
-  "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi","i2c"]
+  "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi","adc"]
 }
