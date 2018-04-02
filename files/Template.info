@@ -3,9 +3,8 @@
   "type":"module",
   "description": "Template example.",
   "version": "0.0.1",
-  "homepage": {
-    "Template":"Template.html"
-  },
+  "homepage": "",
+  "page": "template.html",
   "repository": {
    "type": "git",
    "url": "https://github.com/bondrogeen/template.module"
