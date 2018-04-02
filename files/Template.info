@@ -3,7 +3,9 @@
   "type":"module",
   "description": "Template example.",
   "version": "0.0.1",
-  "homepage": "",
+  "homepage": {
+    "Template":"Template.html"
+  },
   "repository": {
    "type": "git",
    "url": "https://github.com/bondrogeen/template.module"
@@ -12,6 +14,10 @@
   "author": {
     "name":"you_name",
     "email":"you_name@gmail.com"
+  },
+  "native":{
+    "run":false,
+    "gpio":1
   },
   "license": "MIT",
   "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi","i2c"]
