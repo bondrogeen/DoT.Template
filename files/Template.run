@@ -1,4 +1,6 @@
-return function (v)
- 
- return s
+return function (t)
+ if t.run then 
+ dofile("Template.lua")(t)
+ end
+ return t.run
 end
