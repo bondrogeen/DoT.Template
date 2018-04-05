@@ -1,23 +1,31 @@
 {
-  "name": "Template",
-  "type":"module",
-  "description": "Template example.",
-  "version": "0.0.1",
-  "homepage": "",
-  "page": "template.html",
-  "repository": {
-   "type": "git",
-   "url": "https://github.com/bondrogeen/template.module"
+ "name": "Template",
+ "type": "module",
+ "description": "Template example.",
+ "version": "0.0.1",
+ "homepage": "",
+ "page": "template.html",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/bondrogeen/template.module"
+ },
+ "keywords": ["esp8266", "lua", "nodemcu", "webserver", "template"],
+ "author": {
+  "name": "you_name",
+  "email": "you_name@gmail.com"
+ },
+ "native": {
+  "run": {
+   "val": false,
+   "name": "Run"
   },
-  "keywords": ["esp8266", "lua", "nodemcu", "webserver","template"],
-  "author": {
-    "name":"you_name",
-    "email":"you_name@gmail.com"
+  "input": {
+   "val": 'vdd',
+   "type": "select",
+   "values":[abc,vdd],
+   "name": "Mode"
   },
-  "native":{
-    "run":false,
-    "gpio":1
-  },
-  "license": "MIT",
-  "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi","adc"]
+ },
+ "license": "MIT",
+ "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi", "adc"]
 }
