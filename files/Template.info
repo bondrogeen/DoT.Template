@@ -20,9 +20,9 @@
    "name": "Run"
   },
   "mode": {
-   "val": 'vdd',
+   "val": "vdd",
    "type": "select",
-   "values": [abc, vdd],
+   "values": ["abc", "vdd"],
    "name": "Mode"
   }
  },
