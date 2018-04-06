@@ -19,12 +19,12 @@
    "val": false,
    "name": "Run"
   },
-  "input": {
+  "mode": {
    "val": 'vdd',
    "type": "select",
-   "values":[abc,vdd],
+   "values": [abc, vdd],
    "name": "Mode"
-  },
+  }
  },
  "license": "MIT",
  "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi", "adc"]
