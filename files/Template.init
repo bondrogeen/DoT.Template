@@ -1,4 +1,4 @@
 { 
-  "run":true,
-  "mode": true
+  "run":false,
+  "mode": "vdd"
 }
