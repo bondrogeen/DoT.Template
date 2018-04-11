@@ -1,4 +1,6 @@
-{ 
-  "run":false,
-  "mode": "vdd"
+{
+ "run": false,
+ "select0": "One",
+ "text1": "text",
+ "number2": 123
 }
