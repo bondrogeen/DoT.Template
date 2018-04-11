@@ -1,7 +1,5 @@
 return function (t)
 local r
- if t.run then 
- r=dofile("Template.lua")(t)
- end
+ if t.run then r=dofile("Template.lua")(t) end
  return r
 end

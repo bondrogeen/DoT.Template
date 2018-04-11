@@ -6,11 +6,11 @@
  "homepage": "",
  "files": ["Template.init","Template.info","Template.lua","Template.run","Template.html"],
  "page": "Template.html",
+ "img":"https://raw.githubusercontent.com/bondrogeen/Template/master/doc/logo.jpg",
  "repository": {
   "type": "git",
-  "url": "https://github.com/bondrogeen/template.module"
+  "url": "https://github.com/bondrogeen/Template"
  },
- "keywords": ["esp8266", "lua", "nodemcu", "webserver", "template"],
  "author": {
   "name": "you_name",
   "email": "you_name@gmail.com"
@@ -28,5 +28,5 @@
   }
  },
  "license": "MIT",
- "modules": ["crypto", "file", "gpio", "net", "node", "sjson", "tmr", "uart", "wifi", "adc"]
+ "modules": ["adc"]
 }
