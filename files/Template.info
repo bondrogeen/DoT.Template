@@ -19,6 +19,7 @@
   {
    "id": "run",
    "val": false,
+   "type": "checkbox",   
    "name": "Run"
   }, {
    "id": "select0",
@@ -28,7 +29,7 @@
    "name": "Label select"
   }, {
    "id": "text1",
-   "val": "default text",
+   "val": "defalult_text",
    "type": "text",
    "name": "Label text"
   }, {
