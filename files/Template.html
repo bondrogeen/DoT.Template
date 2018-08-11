@@ -60,6 +60,32 @@
 			document.cookie = "id=";
 			location.href = '/login.html';
 		}
+
+  function send(page, data, callback) {
+   var req = new XMLHttpRequest();
+   req.open("POST", page, true);
+   req.setRequestHeader('Content-Type', 'application/json');
+   req.addEventListener("load", function() {
+    if (req.status < 400) {
+     callback(req.responseText);
+    } else {
+     callback(false);
+    }
+   });
+   req.send(JSON.stringify(data));
+  }
+
+  function test() {
+   send("nameScript.lua", {data:true}, function(res) {
+    console.log(res);
+    if (res) {
+     if (res === "false") {
+
+     }
+    }
+   })
+  }
+
 	</script>
 </body>
 
