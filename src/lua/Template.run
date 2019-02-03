@@ -1,0 +1,9 @@
+return function (t)
+local r
+ if t.run then 
+  r=dofile("Template.lua")(t) 
+ else
+  print("Plugin not started")
+ end
+ return r
+end
