@@ -1,14 +1,15 @@
 --[[
 
-The script will be launched when ESP starts.
+The script will run when the ESP is connected to the network.
 Settings will be transferred to the table "table"
 
 --]]
 
+
 return function (table) 
   local r
   if table.run then
-    r = dofile("Template.lua")(table) 
+    r = dofile("Template.net")(table) 
   else
     print("Plugin not started")
   end
