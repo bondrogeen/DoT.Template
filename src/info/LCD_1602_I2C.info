@@ -1,0 +1,48 @@
+{
+ "name": "LCD_1602_I2C",
+ "type": "module",
+ "description": "The LCD display module WH1602 connected via i2c bus (PCF8574).",
+ "version": "0.0.2",
+ "homepage": "",
+ "files": ["LCD_1602_I2C.init", "LCD_1602_I2C.info", "LCD_1602_I2C.lua", "LCD_1602_I2C.run", "LCD_1602_I2C.net", "LCD_1602_I2C.mqtt", "LCD_1602_I2C.html"],
+ "script": "LCD_1602_I2C.js.gz",
+ "page": "LCD_1602_I2C.html",
+ "img": "https://raw.githubusercontent.com/bondrogeen/LCD_1602_I2C/master/doc/img/logo.jpg",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/bondrogeen/LCD_1602_I2C"
+ },
+ "author": {
+  "name": "bondrogeen",
+  "email": "bondrogeen@gmail.com"
+ },
+ "native": [
+  {
+   "id": "run",
+   "val": false,
+   "type": "checkbox",   
+   "name": "Run"
+  }, {
+   "id": "sda",
+   "val": 4,
+   "type": "select",
+   "values": [1,2,3,4,5,6,7,9,10],
+   "name": "Pin i2c data"
+  }, {
+   "id": "scl",
+   "val": 3,
+   "type": "select",
+   "values": [1,2,3,4,5,6,7,9,10],
+   "name": "Pin i2c clock"
+  }, {
+   "id": "id",
+   "val": 1,
+   "type": "select",
+   "values": [1],
+   "name": "ID device"
+  }
+ ],
+ "license": "MIT",
+ "modules": ["adc"]
+}
+

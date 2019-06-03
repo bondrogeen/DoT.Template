@@ -1,0 +1,1 @@
+return function(a)if a then _M:pub("LCD_1602_I2C/comm/line1","")_M:pub("LCD_1602_I2C/comm/line2","")_M:pub("LCD_1602_I2C/comm/cls","")end;return a end
