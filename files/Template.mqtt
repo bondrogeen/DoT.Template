@@ -1,0 +1,1 @@
+return function(a)local b;if a then _M:pub("Template/comm/mydata","")_M:pub("Template/info/ver","0.0.4")end;return b end

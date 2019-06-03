@@ -1,29 +1,36 @@
 # DoT
  
-The plugin LCD WH1602 (I2C PCF8574) for [DoT](https://github.com/bondrogeen/DoT)
+The plugin template for [DoT](https://github.com/bondrogeen/DoT)
 
 
-or
 
-```lua
+## Contributing
+Contributions are welcome.
 
-dofile("LCD_1602_I2C.lua")({init = {sda = 4, scl = 3}}) --initialization i2c and WH1601
+The package is made up of 2 main folders:
 
-dofile("LCD_1602_I2C.lua")({lcd = {str = "Test lcd Lin1 1", line = 1, col = 0}}) --print on the first line 
+- /src (Source files)
+- /files (Compiled and compressed files)
 
-dofile("LCD_1602_I2C.lua")({lcd = {str = "line 2", line = 2, col = 5}}) --print on the second line 
+To setup and run a local copy:
+1. Clone this repo with `git clone https://github.com/bondrogeen/Template`
+2. Run `npm install` in root folder
 
-dofile("LCD_1602_I2C.lua")({cls = true}) --clear screen 
+After installing the dependencies, you can start working with the sources.
 
-dofile("LCD_1602_I2C.lua")({cursor = 1})  -- cursor=1 - show cursor, cursor=0 - hide cursor
+3. Run `gilp build` (Compile and compress files)
 
-dofile("LCD_1602_I2C.lua")({home = true}) --set the cursor to the beginning of the first line
+When you're done working on your changes, submit a PR with the details and include a 
+screenshot if you've changed anything visually.
 
 
-```
+
 ## Changelog
 
-### 0.0.2 (2018-06-20)
-* (bondrogeen) minor fix.
-### 0.0.1 (2018-06-7)
+### 0.0.4 (2019-02-14)
+* (bondrogeen) add gulp
+### 0.0.1 (2018-04-1)
 * (bondrogeen) init.
+
+
+
