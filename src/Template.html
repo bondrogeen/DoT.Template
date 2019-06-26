@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  //= template/head.html
+  <title>Template</title>
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  //= template/header.html
+
+  <div id="Modal" class="modal hide">
+    <div class="m-cont">
+      <span class="close" id="close_m">&times;</span>
+      <div class="m-body">
+        <p>Save settings?</p>
+      </div>
+      <div class="m-foo">
+        <button id="save_m" class="success">Yes</button>
+        <button id="close" class="danger">No</button>
+      </div>
+    </div>
+  </div>
+  <div class="cont">
+    <div class="row">
+      <div class="s12 m2 l2">
+
+      </div>
+      <div class="s12 m10 l-9 ">
+        <h1>Main</h1>
+        <div class="row">
+          <div class="s12">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  //= template/footer.html
+
+  <script>
+    function logout() {
+      document.cookie = "id=";
+      location.href = '/login.html';
+    }
+
+    function send(page, data, callback) {
+      var req = new XMLHttpRequest();
+      req.open("POST", page, true);
+      req.setRequestHeader('Content-Type', 'application/json');
+      req.addEventListener("load", function() {
+        if (callback)(req.status === 200) ? callback(req.responseText) : callback(false)
+      });
+      req.send(JSON.stringify(data));
+    }
+
+    function test() {
+      send("Template.lua", {
+        data: true
+      }, function(res) {
+        console.log(res);
+        if (res) {
+          if (res === "false") {
+
+          }
+        }
+      })
+    }
+
+  </script>
+</body>
+
+</html>

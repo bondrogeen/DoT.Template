@@ -121,8 +121,8 @@ function clearHtml() {
     .pipe(clean());
 };
 
-function clean() {
-  return gulp.src(path.build, {
+function cleanFiles() {
+  return gulp.src(path.clean, {
       read: false
     })
     .pipe(clean());
@@ -259,5 +259,5 @@ gulp.task('clear', gulp.series(clearLua, clearHtml, clearInfo));
 gulp.task('add', gulp.series(addInput));
 
 
-gulp.task('build', gulp.parallel(clean, html, js, style, img, info, lua));
+gulp.task('build', gulp.parallel(cleanFiles, html, js, style, img, info, lua));
 gulp.task('watch', gulp.series(watch));
