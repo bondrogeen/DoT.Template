@@ -18,7 +18,8 @@ To setup and run a local copy:
 
 After installing the dependencies, you can start working with the sources.
 
-3. Run `gilp build` (Compile and compress files)
+3. Run `gilp new` (Create)
+4. Run `gilp build` (Compile and compress files)
 
 When you're done working on your changes, submit a PR with the details and include a 
 screenshot if you've changed anything visually.

@@ -1,1 +1,0 @@
-return function(a)local b;if a.run then b=dofile("Template.net")(a)else print("Plugin not started")end;return b end
