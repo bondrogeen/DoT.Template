@@ -1,1 +1,0 @@
-return function(a)local b;if a.run then b=dofile("test4.lua")(a)end;return b end

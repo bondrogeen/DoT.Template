@@ -268,7 +268,7 @@ function loadInfo(done) {
 }
 
 gulp.task('new', gulp.series(cleanLua, cleanHtml, loadInfo, cleanInfo, init));
-gulp.task('clean', gulp.series(cleanLua, cleanHtml, cleanInfo));
+gulp.task('clean', gulp.series(cleanLua, cleanHtml, cleanInfo, cleanFiles));
 
 gulp.task('add', gulp.series(addInput));
 

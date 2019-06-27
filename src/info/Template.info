@@ -1,26 +1,25 @@
 {
-  "name": "test4",
+  "name": "Template",
   "type": "module",
-  "description": "asdsdlknj sdkfjls ;lasdfk ;sdfk ",
-  "version": "25",
+  "description": "Template plugin for DoT.",
+  "version": "0.0.1",
   "homepage": "",
   "files": [
-    "test4.lua",
-    "test4.mqtt",
-    "test4.net",
-    "test4.run",
-    "test4.info",
-    "test4.init"
+    "Template.lua",
+    "Template.net",
+    "Template.run",
+    "Template.info",
+    "Template.init"
   ],
-  "page": "test4.html",
+  "page": "Template.html",
   "img": "https://raw.githubusercontent.com/bondrogeen/Template/master/doc/logo.jpg",
   "repository": {
     "type": "git",
     "url": ""
   },
   "author": {
-    "name": "test",
-    "email": "test@mail.tr"
+    "name": "you_name",
+    "email": "you_name@gmail.com"
   },
   "native": [
     {
