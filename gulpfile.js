@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 var files = require('./files.js');
 var obj = files.obj;
 
-
+var type = 0;
 var files_arr = [];
 var path_files_arr = [];
 var initFile;
@@ -33,9 +33,8 @@ var path = {
     img: 'src/assets/img/**/*.*',
     lua: 'src/lua/**/*.*',
     info: 'src/info/**/*.*',
-    obj: 'src/info/Template.info',
-    init: 'package.json',
     fonts: 'src/assets/fonts/**/*.*',
+    tempHtml: 'src/template/main.html',
     path_info: './src/info/',
     path_lua: './src/lua/'
   },
@@ -48,7 +47,7 @@ var path = {
     info: 'src/info/**/*.*',
     fonts: 'src/assets/fonts/**/*.*'
   },
-  clean: './files'
+  clean: './files/*.*'
 };
 
 function html() {
@@ -100,21 +99,21 @@ function lua() {
     .pipe(gulp.dest(path.build));
 };
 
-function clearInfo() {
+function cleanInfo() {
   return gulp.src(path.src.info, {
       read: false
     })
     .pipe(clean());
 };
 
-function clearLua() {
+function cleanLua() {
   return gulp.src(path.src.lua, {
       read: false
     })
     .pipe(clean());
 };
 
-function clearHtml() {
+function cleanHtml() {
   return gulp.src(path.src.html, {
       read: false
     })
@@ -137,7 +136,7 @@ function watch() {
 }
 
 function init() {
-  return gulp.src(path.src.init)
+  return gulp.src(path.src.tempHtml)
     .pipe(prompt.prompt([{
       type: 'input',
       name: 'project',
@@ -212,21 +211,36 @@ function init() {
       temp = temp.replace(/Template/g, obj.name);
       fs.writeFileSync('./src/' + obj.name + '.html', temp);
 
+      console.log('Build plagin - "gulp build" ');
+
     }));
 };
 
 function addInput() {
-  return gulp.src(path.src.init)
-    .pipe(prompt.prompt({
-      name: 'add',
-      default: false,
-      message: 'Add input?'
-    }, function (res) {
-      console.log();
-      if (res.add) {
+  return gulp.src(path.src.html)
+    .pipe(prompt.prompt([
+      {
+        type: 'list',
+        name: 'type',
+        message: 'Type input?',
+        choices: ['Select', 'Text', 'Number'],
+        default: 0
+    }], function (res) {
+      type = res.type;
+    }));
+}
 
-      }
-      //value is in res.task (the name option gives the key)
+function inputSelect(){
+  return gulp.src(path.src.html)
+    .pipe(prompt.prompt([
+      {
+        type: 'list',
+        name: 'type',
+        message: 'Type input?',
+        choices: ['Select', 'Text', 'Number'],
+        default: 1
+    }], function (res) {
+      type = res.type;
     }));
 }
 
@@ -253,8 +267,8 @@ function loadInfo(done) {
   return done()
 }
 
-gulp.task('new', gulp.series(clearLua, clearHtml, loadInfo, clearInfo, init));
-gulp.task('clear', gulp.series(clearLua, clearHtml, clearInfo));
+gulp.task('new', gulp.series(cleanLua, cleanHtml, loadInfo, cleanInfo, init));
+gulp.task('clean', gulp.series(cleanLua, cleanHtml, cleanInfo));
 
 gulp.task('add', gulp.series(addInput));
 

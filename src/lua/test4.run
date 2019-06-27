@@ -6,7 +6,7 @@ Settings will be transferred to the table "table"
 return function (table) 
   local r
   if table.run then 
-    r = dofile("Template.lua")(table)
+    r = dofile("test4.lua")(table)
   end
   return r
 end
