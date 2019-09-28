@@ -14,12 +14,13 @@ The package is made up of 2 main folders:
 
 To setup and run a local copy:
 1. Clone this repo with `git clone https://github.com/bondrogeen/Template`
-2. Run `npm install` in root folder
+2. cd DoT.Temlpate
+3. Run `npm install` in root folder
 
 After installing the dependencies, you can start working with the sources.
 
-3. Run `gilp new` (Create)
-4. Run `gilp build` (Compile and compress files)
+3. Run `gulp new` (Create)
+4. Run `gulp build` (Compile and compress files)
 
 When you're done working on your changes, submit a PR with the details and include a 
 screenshot if you've changed anything visually.
