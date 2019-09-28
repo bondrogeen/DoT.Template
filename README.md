@@ -14,7 +14,7 @@ The package is made up of 2 main folders:
 
 To setup and run a local copy:
 1. Clone this repo with `git clone https://github.com/bondrogeen/Template`
-2. cd DoT.Temlpate
+2. Go to folder `cd DoT.Temlpate`
 3. Run `npm install` in root folder
 
 After installing the dependencies, you can start working with the sources.
